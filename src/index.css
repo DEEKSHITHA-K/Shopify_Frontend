@@ -1,0 +1,45 @@
+/* This file should be your main CSS entry point, e.g., src/index.css or src/App.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can optionally add any *global* custom CSS here if absolutely necessary,
+   but for most things, Tailwind classes in your components are preferred. */
+
+/* Example of adding a global font if not using Tailwind's default */
+body {
+  font-family: 'Inter', sans-serif; /* Your App.js has this in <style> block, move it here */
+}
+
+/* If you still need specific custom animations not covered by Tailwind: */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+  opacity: 0;
+}
+/* ... and other custom styles like .custom-scrollbar from your App.js <style> block */
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* gray-300 */
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; /* gray-400 */
+}
